@@ -8,6 +8,7 @@
     <meta name="description" content="Portfolio 2025">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/6b1c91eb6a.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -144,6 +145,18 @@
             </div>
         </div>
     </main>
+        <script>
+        const element = document.querySelector(".total");
+
+        element.addEventListener('wheel', (event) => {
+            event.preventDefault();
+
+            element.scrollBy({
+                left: event.deltaY < 0 ? -30 : 30,
+
+            });
+        });
+    </script>
 </body>
 
 </html>
