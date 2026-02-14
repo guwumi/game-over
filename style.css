@@ -15,6 +15,7 @@ body{
     font-family: "Pixel Operator Mono HB", "Inter", sans-serif;
     font-family: "Inter", sans-serif;
     color: #31322D;
+    overflow: hidden;
 }
 
 main{
@@ -57,6 +58,8 @@ a{
     overflow-y: hidden;
     width: 100vw;
     scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    height: calc(100vh - 80px);
     &::-webkit-scrollbar {
         height: 7px;
         width: 7px;
@@ -70,9 +73,9 @@ a{
 }
 
 .total > div{
-   flex: 1 0 100%;
-   height: calc(100vh - 80px);
-   scroll-snap-align: center;
+    flex: 1 0 100%; 
+    height: calc(100vh - 80px); 
+    scroll-snap-align: start;
 }
 
 
@@ -227,6 +230,7 @@ video{
     .logo{
         width: 32px;
         height: 32px;
+        border-radius: 5px;
     }
 
 /* general proyectos */
@@ -245,78 +249,6 @@ video{
         font-size: 32px;
         font-weight: 600;
     }
-
-        .flecha1{
-            position: absolute;
-            top: 20%;
-            left: 90%;
-        }
-
-        .flecha2{
-            position: absolute;
-            top: 80%;
-            left: 90%;
-        }
-
-        .flecha3{
-            position: absolute;
-            top: 40%;
-            left: 90%;
-        }
-
-/* TAMAÑO DE LADRILLOS */
-
-.ladrilloflecha{
-    width: 80px;
-    height: auto;
-    opacity: 0.8;}
-
-.ladrillolargo{
-    width: 160px;
-    height: auto;
-    opacity: 0.8;}
-
-.ladrillo{
-    width: 110px;
-    height: auto;
-    opacity: 0.8;}
-
-.ladrillocorto{
-    width: 85px;
-    height: auto;
-    opacity: 0.8;}
-
-        /* POSICIONES DE LADRILLOS */
-
-        .ladrillo1{
-            position: absolute;
-            top: 40%;
-            left: 80%;
-        }
-
-        .ladrillo2{
-            position: absolute;
-            top: 40%;
-            left: 5%;
-        }
-
-        .ladrillo3{
-            position: absolute;
-            top: 50%;
-            left: 20%;
-        }
-
-        .ladrillo4{
-            position: absolute;
-            top: 80%;
-            left: 2%;
-        }
-
-        .ladrillo5{
-            position: absolute;
-            top: 70%;
-            left: 10%;
-        }
 
     /* VIDEOS */
     
@@ -337,9 +269,10 @@ video{
 .chau{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     padding: 50px;
-    gap: 200px;
+    gap: 300px;
+    position: relative;
 }
 
 .chau h1{
@@ -351,14 +284,23 @@ video{
     text-shadow: 3px 3px #31322D;
     }
 
+    .chau img{
+        position: absolute;
+        top: 67%;
+        left: 87%;
+        width: 10%;
+        height: auto;
+    }
+
 .contacto{
     font-size: 24px;
+    width: 10%;
 }
 
 .contacto ul{
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
     list-style: none;
 }
 
@@ -367,3 +309,7 @@ video{
     align-items: center;
     gap: 10px;
 }
+
+    .contacto a:hover p{
+    text-decoration: underline;
+    }
